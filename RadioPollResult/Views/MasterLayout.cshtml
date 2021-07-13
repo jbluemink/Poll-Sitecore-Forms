@@ -1,0 +1,26 @@
+﻿@using Sitecore.Mvc;
+@using Sitecore.Mvc.Analytics.Extensions;
+@using System.Configuration
+
+<!doctype html>
+<html lang="@Sitecore.Context.Language.Name.ToLower()">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="@Sitecore.Context.Language.Name.ToLower()">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    @Html.Sitecore().VisitorIdentification()
+</head>
+<body>
+   <H1>JBL MVC base page</H1>
+    @Html.Sitecore().Placeholder("jbl-header")
+    
+    <div>
+        @Html.Sitecore().Placeholder("jbl-content")
+    </div>
+
+    @Html.Sitecore().Placeholder("jbl-footer")
+  
+</body>
+</html>

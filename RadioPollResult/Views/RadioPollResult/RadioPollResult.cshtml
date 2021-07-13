@@ -1,0 +1,19 @@
+﻿@using Sitecore.Mvc.Presentation
+@using Sitecore.Mvc
+@using Sitecore.Globalization
+@model RadioPollResult.Models.RadioPollResultModel
+
+
+
+
+<h2>@Model.Title</h2>
+@Model.Text
+
+<table>
+    @foreach(var entry in Model.Result)
+    {
+        <tr>
+            <td>@entry.Key</td><td>@entry.Value</td>
+        </tr>
+    }
+</table>

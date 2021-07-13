@@ -1,0 +1,46 @@
+{
+	"namespace": "Project.RadioPollResult",
+	"items": {
+		"includes": [{
+				"name": "contentpoll",
+				"path": "/sitecore/content/home/poll"
+			},
+			{
+				"name": "contentregistration",
+				"path": "/sitecore/content/home/registration"
+			},
+			{
+				"name": "contentresult",
+				"path": "/sitecore/content/home/result"
+			},
+			{
+				"name": "formpoll",
+				"path": "/sitecore/forms/poll"
+			},
+			{
+				"name": "formpregister",
+				"path": "/sitecore/forms/register"
+			},
+			{
+				"name": "layout",
+				"path": "/sitecore/layout/Layouts/Project/JBL MVC Layout"
+			},
+			{
+				"name": "placeholder",
+				"path": "/sitecore/layout/Placeholder Settings/jbl-content"
+			},
+			{
+				"name": "rendering",
+				"path": "/sitecore/layout/Renderings/Feature/RadioPollResult"
+			},
+			{
+				"name": "submitactions",
+				"path": "/sitecore/system/Settings/Forms/Submit Actions/Update Car Color"
+			},
+			{
+				"name": "templates",
+				"path": "/sitecore/templates/Feature/FormExtension"
+			}
+		]
+	}
+}

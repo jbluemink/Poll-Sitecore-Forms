@@ -1,0 +1,42 @@
+﻿---
+ID: "03bdb625-b189-4ce5-bbfb-d8d187dae28a"
+Parent: "9fb967a1-171a-4424-ab3b-ad066e4f6657"
+Template: "b3bdfe59-6667-4432-b261-05d0e3f7fdf6"
+Path: /sitecore/Forms/poll/Page/Radio Button List/Settings/Datasource/Green
+SharedFields:
+- ID: "3a07c171-9bca-464d-8670-c5703c6d3f11"
+  Hint: Value
+  Value: Green
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Green
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210707T080833Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d165dbd4-b78b-4656-8fc8-389bbc7be5a4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210709T104938Z
