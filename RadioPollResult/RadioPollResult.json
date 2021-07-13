@@ -1,7 +1,8 @@
 {
 	"namespace": "Project.RadioPollResult",
 	"items": {
-		"includes": [{
+		"includes": [
+			{
 				"name": "contentpoll",
 				"path": "/sitecore/content/home/poll"
 			},
@@ -40,6 +41,10 @@
 			{
 				"name": "templates",
 				"path": "/sitecore/templates/Feature/FormExtension"
+			},
+			{
+				"name": "goal",
+				"path": "/sitecore/system/Marketing Control Panel/Goals/poll"
 			}
 		]
 	}

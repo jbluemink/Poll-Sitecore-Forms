@@ -500,6 +500,7 @@
     <Content Include="Views\RadioPollResult\RadioPollResult.cshtml" />
     <Content Include="Views\RadioPollResult\EpExpressPreferences.cshtml" />
     <Content Include="Views\MasterLayout.cshtml" />
+    <Content Include="RadioPollResult.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

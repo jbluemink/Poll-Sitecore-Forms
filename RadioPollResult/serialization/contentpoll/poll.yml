@@ -43,9 +43,10 @@ Languages:
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
               uid="{56DB2EC1-7B04-4263-886F-2D2D70DCCF82}"
+              p:before="*"
               s:ds="{3A552DCF-9681-4083-87EA-A97AD5C458A3}"
               s:id="{6B5B0FE6-5C85-4487-BA7E-F8C2ECC186A8}"
-              s:pt="{3B72BD9A-FC6E-4E4A-9CC4-2DF2F7274C05}"
+              s:pt="{B0684E3C-A323-4B91-8BB2-1F6F5649237C}"
               s:ph="jbl-content">
               <rls>
                 <ruleset
@@ -61,10 +62,14 @@ Languages:
                         s:GoalId="{E19F976F-1E02-4CBF-B9E2-0FC3ABCF77EE}"
                         s:NumberOfElapsedDaysOperatorId="{E362A3A4-E230-4A40-A7C4-FC42767E908F}"
                         s:NumberOfElapsedDays="60"
-                        s:NumberOfPastInteractionsOperatorId="{E362A3A4-E230-4A40-A7C4-FC42767E908F}"
-                        s:NumberOfPastInteractions="90" />
+                        s:NumberOfPastInteractionsOperatorId="{3627ED99-F454-4B83-841A-A0194F0FB8B4}"
+                        s:NumberOfPastInteractions="-1" />
                     </conditions>
-                    <actions />
+                    <actions>
+                      <action
+                        uid="8214BD30F5D84C3CA800F7CC80701016"
+                        s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" />
+                    </actions>
                   </rule>
                   <rule
                     uid="{00000000-0000-0000-0000-000000000000}"
@@ -76,6 +81,51 @@ Languages:
                         s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
                     </conditions>
                     <actions />
+                  </rule>
+                </ruleset>
+              </rls>
+            </r>
+            <r
+              uid="{50D71D8F-5D4F-4AAC-B403-6BE30A670986}"
+              p:after="*[1=2]"
+              s:ds="{30D03CCD-E1D7-4D7B-B719-25B0C69FE92D}"
+              s:id="{B0E1F75A-1638-4202-BD41-D2A6C2277D84}"
+              s:pt="{B0684E3C-A323-4B91-8BB2-1F6F5649237C}"
+              s:par=""
+              s:ph="jbl-content"
+              s:ccb="Clear on publish">
+              <rls>
+                <ruleset
+                  s:pet="true">
+                  <rule
+                    uid="{75F2DCFD-0F0A-4B2F-88DA-13DFA1DB1A0F}"
+                    s:name="Specify name..."
+                    s:test="true">
+                    <conditions>
+                      <condition
+                        uid="B83EA65656CC4ECF9121D37624A81854"
+                        s:id="{C1DA0D65-C9C7-4526-91BB-E0390A7D3833}"
+                        s:GoalId="{E19F976F-1E02-4CBF-B9E2-0FC3ABCF77EE}"
+                        s:NumberOfElapsedDaysOperatorId="{E362A3A4-E230-4A40-A7C4-FC42767E908F}"
+                        s:NumberOfElapsedDays="60"
+                        s:NumberOfPastInteractionsOperatorId="{3627ED99-F454-4B83-841A-A0194F0FB8B4}"
+                        s:NumberOfPastInteractions="788888" />
+                    </conditions>
+                  </rule>
+                  <rule
+                    uid="{00000000-0000-0000-0000-000000000000}"
+                    s:name="Default"
+                    s:test="true">
+                    <conditions>
+                      <condition
+                        uid="BC4AE160AB38498AB87267F4A97F4D78"
+                        s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="EA22314BF1064766B5528F5FA00339B8"
+                        s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" />
+                    </actions>
                   </rule>
                 </ruleset>
               </rls>
@@ -101,11 +151,11 @@ Languages:
       Value: poll
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "8a50c581-49f2-4ebd-a8df-63e2a0c509d5"
+      Value: "85330535-4252-461c-8ceb-c974838d9a55"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210709T105253Z
+      Value: 20210713T131932Z

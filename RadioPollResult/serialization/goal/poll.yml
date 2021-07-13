@@ -1,0 +1,44 @@
+﻿---
+ID: "e19f976f-1e02-4cbf-b9e2-0fc3abcf77ee"
+Parent: "0cb97a9f-cafb-42a0-8be1-89ab9ae32bd9"
+Template: "475e9026-333f-432d-a4dc-52e03b75cb6b"
+Path: /sitecore/system/Marketing Control Panel/Goals/poll
+SharedFields:
+- ID: "33ae0e84-74a0-437f-ab2b-859dfa96f6c9"
+  Hint: Points
+  Value: 100
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{689E2994-4656-4C58-9112-7826CB46EE69}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210707T081204Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{EDCBB550-BED3-490F-82B8-7B2F14CCD26E}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d4a78738-1b7d-4cb9-aa0b-50195c57f4ba"
+    - ID: "ac6ba888-4213-43bd-b787-d8da2b6b881f"
+      Hint: Name
+      Value: poll
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210707T081204Z

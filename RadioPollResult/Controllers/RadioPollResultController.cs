@@ -19,10 +19,10 @@ namespace RadioPollResult.Controllers
             var currentItem = GetDatasourceItem();
 
             var model = new RadioPollResultModel();
-            model.Title = currentItem.Fields["Title"]?.Value;
-            model.Text = currentItem.Fields["Text"]?.Value;
+            model.Title = currentItem?.Fields["Title"]?.Value;
+            model.Text = currentItem?.Fields["Text"]?.Value;
 
-            Item radioField = ((Sitecore.Data.Fields.InternalLinkField)currentItem.Fields["Radio Field"])?.TargetItem;
+            Item radioField = ((Sitecore.Data.Fields.InternalLinkField)currentItem?.Fields["Radio Field"])?.TargetItem;
 
             if (radioField != null)
             {
