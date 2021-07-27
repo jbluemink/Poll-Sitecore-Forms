@@ -42,28 +42,31 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{56DB2EC1-7B04-4263-886F-2D2D70DCCF82}"
+              uid="{B32D4237-2A01-4EE5-B198-DBC94AA9A2E2}"
               p:before="*"
+              s:id="{493B3A83-0FA7-4484-8FC9-4680991CF743}"
+              s:ph="jbl-content" />
+            <r
+              uid="{56DB2EC1-7B04-4263-886F-2D2D70DCCF82}"
+              p:after="r[@uid='{B32D4237-2A01-4EE5-B198-DBC94AA9A2E2}']"
               s:ds="{3A552DCF-9681-4083-87EA-A97AD5C458A3}"
               s:id="{6B5B0FE6-5C85-4487-BA7E-F8C2ECC186A8}"
-              s:pt="{B0684E3C-A323-4B91-8BB2-1F6F5649237C}"
-              s:ph="jbl-content">
+              s:pt="{9332E0B7-9016-4C8A-9E7D-E69DB6CFCC9C}"
+              s:par=""
+              s:ph="jbl-content"
+              s:ccb="Clear on publish">
               <rls>
                 <ruleset
                   s:pet="true">
                   <rule
                     uid="{C7ACFA8D-33D7-43BD-87A6-6D07708E08A3}"
-                    s:name="poll sumitted"
+                    s:name="hide if poll already sumitted"
                     s:test="true">
                     <conditions>
                       <condition
-                        uid="5A0D827305824E199DE187FCAB7F399D"
-                        s:id="{C1DA0D65-C9C7-4526-91BB-E0390A7D3833}"
-                        s:GoalId="{E19F976F-1E02-4CBF-B9E2-0FC3ABCF77EE}"
-                        s:NumberOfElapsedDaysOperatorId="{E362A3A4-E230-4A40-A7C4-FC42767E908F}"
-                        s:NumberOfElapsedDays="60"
-                        s:NumberOfPastInteractionsOperatorId="{3627ED99-F454-4B83-841A-A0194F0FB8B4}"
-                        s:NumberOfPastInteractions="-1" />
+                        uid="483F21D1971349FA813CD0AB965CC8FC"
+                        s:id="{E63F79B2-0E1F-43DC-9BA1-C1DF6CC1CB2F}"
+                        s:except="true" />
                     </conditions>
                     <actions>
                       <action
@@ -90,7 +93,7 @@ Languages:
               p:after="*[1=2]"
               s:ds="{30D03CCD-E1D7-4D7B-B719-25B0C69FE92D}"
               s:id="{B0E1F75A-1638-4202-BD41-D2A6C2277D84}"
-              s:pt="{B0684E3C-A323-4B91-8BB2-1F6F5649237C}"
+              s:pt="{9332E0B7-9016-4C8A-9E7D-E69DB6CFCC9C}"
               s:par=""
               s:ph="jbl-content"
               s:ccb="Clear on publish">
@@ -99,18 +102,22 @@ Languages:
                   s:pet="true">
                   <rule
                     uid="{75F2DCFD-0F0A-4B2F-88DA-13DFA1DB1A0F}"
-                    s:name="Specify name..."
+                    s:name="Show poll result"
                     s:test="true">
                     <conditions>
                       <condition
-                        uid="B83EA65656CC4ECF9121D37624A81854"
-                        s:id="{C1DA0D65-C9C7-4526-91BB-E0390A7D3833}"
-                        s:GoalId="{E19F976F-1E02-4CBF-B9E2-0FC3ABCF77EE}"
-                        s:NumberOfElapsedDaysOperatorId="{E362A3A4-E230-4A40-A7C4-FC42767E908F}"
-                        s:NumberOfElapsedDays="60"
-                        s:NumberOfPastInteractionsOperatorId="{3627ED99-F454-4B83-841A-A0194F0FB8B4}"
-                        s:NumberOfPastInteractions="788888" />
+                        uid="FF9416796A2E4EA982689C576E897BFA"
+                        s:id="{E63F79B2-0E1F-43DC-9BA1-C1DF6CC1CB2F}" />
                     </conditions>
+                    <actions>
+                      <action
+                        uid="A2A78A384C0E436EB64628CC32678334"
+                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                        s:DataSource="{30D03CCD-E1D7-4D7B-B719-25B0C69FE92D}" />
+                      <action
+                        uid="BC1EC296D3AF401AB072150FFF12838A"
+                        s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" />
+                    </actions>
                   </rule>
                   <rule
                     uid="{00000000-0000-0000-0000-000000000000}"
@@ -123,8 +130,9 @@ Languages:
                     </conditions>
                     <actions>
                       <action
-                        uid="EA22314BF1064766B5528F5FA00339B8"
-                        s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" />
+                        uid="B10377F69D5F49DBA79BBC193214423B"
+                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                        s:DataSource="{30D03CCD-E1D7-4D7B-B719-25B0C69FE92D}" />
                     </actions>
                   </rule>
                 </ruleset>
@@ -148,14 +156,19 @@ Languages:
         sitecore\Admin
     - ID: "75577384-3c97-45da-a847-81b00500e250"
       Hint: Title
-      Value: poll
+      Value: poll page
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "85330535-4252-461c-8ceb-c974838d9a55"
+      Value: "c0ba4c87-b029-4614-9117-9472d0eb8ef6"
+    - ID: "a60acd61-a6db-4182-8329-c957982cec74"
+      Hint: Text
+      Value: |
+        Contain the poll in Sitecore Form and a Result component, both have a personalization rule based on if the favorite car color is already filled in. show or hide<br class="t-last-br" />
+        <br class="t-last-br" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210713T131932Z
+      Value: 20210727T125651Z

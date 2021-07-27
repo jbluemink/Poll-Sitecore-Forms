@@ -1,15 +1,13 @@
 ﻿---
-ID: "da42f8d4-7c6a-4748-b38a-f4136c58194b"
-Parent: "fe2aca2f-f908-40ca-aef8-a72e6d22dbfa"
-Template: "05fe45d4-b9c7-40de-b767-7c5abe7119f9"
-Path: /sitecore/Forms/poll/Page/Submit Button/SubmitActions/Update Car Color
+ID: "86d793af-fd3e-45f2-9a67-5967ccab3fbf"
+Parent: "5059e544-3808-4bb4-94cc-1972f2408e97"
+Template: "aa91a868-02f2-41d3-8b78-1cad91b4dcae"
+Path: /sitecore/system/Settings/Rules/Definitions/Tags/Favorite Car Color/Visibility
+BranchID: "60e3e35b-cef9-4afa-9f89-204ed015ccb9"
 SharedFields:
-- ID: "abc57b6d-5542-4ab9-a889-106225a032e6"
-  Hint: Submit Action
-  Value: "{C9A95DCB-C608-43C2-9F28-F7C3BDF572FD}"
-- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
-  Hint: __Sortorder
-  Value: 100
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{B1ECD86C-5B13-4698-A27A-CBE89DC12393}"
 Languages:
 - Language: en
   Versions:
@@ -17,7 +15,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210709T104939Z
+      Value: 20210726T145207Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -28,11 +26,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "226e470e-9ce6-4692-aa07-629c3fa74098"
+      Value: "efc60523-6b97-4499-b6ca-ae77101b77d1"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210714T133410Z
+      Value: 20210726T145207Z

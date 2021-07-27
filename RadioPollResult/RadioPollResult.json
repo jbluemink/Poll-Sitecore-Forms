@@ -45,6 +45,18 @@
 			{
 				"name": "goal",
 				"path": "/sitecore/system/Marketing Control Panel/Goals/poll"
+			},
+			{
+				"name": "ruletagcarcolor",
+				"path": "/sitecore/system/Settings/Rules/Definitions/Tags/Favorite Car Color"
+			},
+			{
+				"name": "rulelemencarcolor",
+				"path": "/sitecore/system/Settings/Rules/Definitions/Elements/Favorit Car Color"
+			},
+			{
+				"name": "ruleconditionalrendering",
+				"path": "/sitecore/system/Settings/Rules/Conditional Renderings/Tags/Default"
 			}
 		]
 	}

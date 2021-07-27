@@ -42,7 +42,13 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
+              uid="{B2550EA9-3997-4047-8CA2-EBFBF3B3A0F1}"
+              p:before="*"
+              s:id="{493B3A83-0FA7-4484-8FC9-4680991CF743}"
+              s:ph="jbl-content" />
+            <r
               uid="{68F72961-800F-4E80-B8D0-7E3E6540652C}"
+              p:after="*[1=2]"
               s:ds="{30D03CCD-E1D7-4D7B-B719-25B0C69FE92D}"
               s:id="{B0E1F75A-1638-4202-BD41-D2A6C2277D84}"
               s:ph="jbl-content" />
@@ -64,14 +70,19 @@ Languages:
         sitecore\Admin
     - ID: "75577384-3c97-45da-a847-81b00500e250"
       Hint: Title
-      Value: result
+      Value: Result
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "28aad80a-6a5b-4b80-b9c1-6b7ba06e69cc"
+      Value: "de1d975d-d50a-45fc-8c73-c99383cf4c0d"
+    - ID: "a60acd61-a6db-4182-8329-c957982cec74"
+      Hint: Text
+      Value: |
+        <br class="t-last-br" />
+        Just the result component, which read the aggregated poll values from the Forms database<br class="t-last-br" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210713T070401Z
+      Value: 20210727T125824Z

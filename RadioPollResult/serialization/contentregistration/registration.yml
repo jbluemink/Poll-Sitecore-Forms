@@ -42,7 +42,13 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
+              uid="{EC3AEE9F-843B-4B5D-9C2C-22D4CA011CD9}"
+              p:before="*"
+              s:id="{493B3A83-0FA7-4484-8FC9-4680991CF743}"
+              s:ph="jbl-content" />
+            <r
               uid="{15DA7A48-2800-4905-A9B6-31EBA4505CBA}"
+              p:after="*[1=2]"
               s:ds="{47609015-21E6-473E-82BF-338C83C3368A}"
               s:id="{6B5B0FE6-5C85-4487-BA7E-F8C2ECC186A8}"
               s:ph="jbl-content" />
@@ -64,14 +70,19 @@ Languages:
         sitecore\Admin
     - ID: "75577384-3c97-45da-a847-81b00500e250"
       Hint: Title
-      Value: registration
+      Value: Registration
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5d4c55ff-9d0a-4673-8132-ab731be5d125"
+      Value: "10074139-17fe-494d-bcb6-a11275fefddb"
+    - ID: "a60acd61-a6db-4182-8329-c957982cec74"
+      Hint: Text
+      Value: |
+        This page contain a Sitecore Form with the xDB ValueProvider from https://github.com/bartverdonck/Sitecore-Forms-Extensions
+        so fields are pre filled with the values stored in XB and they are also stored in xDB, When filling in a name, it is easer to find the user in the xDB profile<br class="t-last-br" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210708T064239Z
+      Value: 20210727T125340Z

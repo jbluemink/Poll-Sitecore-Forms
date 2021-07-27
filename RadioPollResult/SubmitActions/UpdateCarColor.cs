@@ -106,7 +106,7 @@ namespace RadioPollResult.SubmitActions
         {
             var manager = Sitecore.Configuration.Factory.CreateObject("tracking/contactManager", true) as Sitecore.Analytics.Tracking.ContactManager;
 
-            if (Sitecore.Analytics.Tracker.Current.Contact.IsNew)
+            if (Sitecore.Analytics.Tracker.Current.Contact.IsNew || !Sitecore.Analytics.Tracker.Current.Contact.Identifiers.Any())
             {
                 SetColorInformationNewContact(color);
             }

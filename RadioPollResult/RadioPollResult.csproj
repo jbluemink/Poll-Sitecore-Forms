@@ -491,6 +491,8 @@
     <Compile Include="Models\RadioPollResultModel.cs" />
     <Compile Include="Preferences.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\IsFavoriteCarColorEmptyCondition.cs" />
+    <Compile Include="Rules\FavoriteCarColorCondition.cs" />
     <Compile Include="Services\SqlPoll.cs" />
     <Compile Include="SubmitActions\UpdateCarColor.cs" />
   </ItemGroup>
