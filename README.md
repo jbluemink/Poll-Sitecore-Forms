@@ -7,9 +7,9 @@ To run on Sitecore 10.1
 
 Setup
 - run serializexConnectmodel console app  and deploy deploy PreferencesModel, 0.1.json and the dll
-see ![deploy-a-custom-model](https://doc.sitecore.com/en/developers/101/sitecore-experience-platform/deploy-a-custom-model.html)
+see https://doc.sitecore.com/en/developers/101/sitecore-experience-platform/deploy-a-custom-model.html
 - deploy RadioPollResult
-- setup Sitecore CI and push item to sitecore
+- setup Sitecore CLI and push item to Sitecore
 - publish
 
 
