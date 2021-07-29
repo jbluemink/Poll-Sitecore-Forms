@@ -11,14 +11,19 @@ using Sitecore.ExperienceForms.Processing.Actions;
 using Sitecore.XConnect;
 using Sitecore.XConnect.Client;
 using Sitecore.XConnect.Client.Configuration;
-
+//save action without layout, but with hardcoded radiofield, just as a sample
 namespace RadioPollResult.SubmitActions
 {
-    public class UpdateCarColor : SubmitActionBase<UpdateCarColorData>
+    public class UpdateCarColorHardcoded : SubmitActionBase<string>
     {
 
-        public UpdateCarColor(ISubmitActionData submitActionData) : base(submitActionData)
+        public UpdateCarColorHardcoded(ISubmitActionData submitActionData) : base(submitActionData)
         {
+        }
+        protected override bool TryParse(string value, out string target)
+        {
+            target = string.Empty;
+            return true;
         }
 
         /// <summary>
@@ -32,16 +37,12 @@ namespace RadioPollResult.SubmitActions
         /// <param name="data">The data.</param>
         /// <param name="formSubmitContext">The form submit context.</param>
         /// <returns><c>true</c> if the action is executed correctly; otherwise <c>false</c></returns>
-        protected override bool Execute(UpdateCarColorData data, FormSubmitContext formSubmitContext)
+        protected override bool Execute(string data, FormSubmitContext formSubmitContext)
         {
             Assert.ArgumentNotNull(data, nameof(data));
             Assert.ArgumentNotNull(formSubmitContext, nameof(formSubmitContext));
-            if (data.FieldPoll == null || data.FieldPoll == Guid.Empty)
-            {
-                return false;
-            }
 
-            var colorField = GetFieldById(data.FieldPoll.Value, formSubmitContext.Fields);
+            var colorField = GetFieldById(new Guid("{AF30BD1C-BDFA-4B89-8767-52DC667758FC}"), formSubmitContext.Fields);
 
             if (colorField == null)
             {

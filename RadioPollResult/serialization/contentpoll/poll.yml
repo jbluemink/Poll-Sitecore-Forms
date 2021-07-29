@@ -156,10 +156,10 @@ Languages:
         sitecore\Admin
     - ID: "75577384-3c97-45da-a847-81b00500e250"
       Hint: Title
-      Value: poll page
+      Value: Poll page
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c0ba4c87-b029-4614-9117-9472d0eb8ef6"
+      Value: "2b647b13-e6e8-49c0-a3d4-8491f0d1dc5d"
     - ID: "a60acd61-a6db-4182-8329-c957982cec74"
       Hint: Text
       Value: |
@@ -171,4 +171,4 @@ Languages:
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210727T125651Z
+      Value: 20210727T140704Z

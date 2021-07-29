@@ -10,6 +10,9 @@ SharedFields:
 - ID: "2c6e7306-2871-473a-9149-71443182b8e8"
   Hint: Model Type
   Value: RadioPollResult.SubmitActions.UpdateCarColor
+- ID: "d83b5c6b-7230-419f-bd75-4e2d20c87a18"
+  Hint: Editor
+  Value: "{2BF3DDDD-64E1-4969-A0F6-62FED54DC066}"
 Languages:
 - Language: en
   Versions:
@@ -31,11 +34,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "332bec93-49d2-4ab6-866b-3defa28ff8df"
+      Value: "e4e6c909-4a04-4d9d-b496-72926a34386e"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210709T100647Z
+      Value: 20210728T123924Z

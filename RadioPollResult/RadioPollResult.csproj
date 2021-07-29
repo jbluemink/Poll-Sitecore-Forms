@@ -481,6 +481,7 @@
   <ItemGroup>
     <Content Include="App_Config\Include\EpExpressTab.config" />
     <None Include="App_Config\Include\Preferences.xdb.config" />
+    <Content Include="sitecore\shell\client\Applications\FormsBuilder\Layouts\Actions\UpdateCarColor.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -494,6 +495,8 @@
     <Compile Include="Rules\IsFavoriteCarColorEmptyCondition.cs" />
     <Compile Include="Rules\FavoriteCarColorCondition.cs" />
     <Compile Include="Services\SqlPoll.cs" />
+    <Compile Include="SubmitActions\UpdateCarColorData.cs" />
+    <Compile Include="SubmitActions\UpdateCarColorHarcoded.cs" />
     <Compile Include="SubmitActions\UpdateCarColor.cs" />
   </ItemGroup>
   <ItemGroup>

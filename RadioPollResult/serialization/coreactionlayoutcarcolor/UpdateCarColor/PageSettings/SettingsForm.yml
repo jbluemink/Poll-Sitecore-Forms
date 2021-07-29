@@ -1,19 +1,21 @@
 ﻿---
-ID: "790a7d36-33d8-4810-9109-6511118ff50b"
-Parent: "fe2aca2f-f908-40ca-aef8-a72e6d22dbfa"
-Template: "05fe45d4-b9c7-40de-b767-7c5abe7119f9"
-Path: /sitecore/Forms/poll/Page/Submit Button/SubmitActions/Update Car Color
+ID: "0cae2477-d5de-49af-949f-37b861b14694"
+Parent: "642c23a3-6817-44a7-ab40-45ef7bde60af"
+Template: "72e58860-ac29-47e1-a1c5-8f9e492db999"
+Path: /sitecore/client/Applications/FormsBuilder/Components/Layouts/Actions/UpdateCarColor/PageSettings/SettingsForm
 SharedFields:
-- ID: "5c796924-3f06-4d1f-8510-8ad9a4244477"
-  Hint: Parameters
-  Value: |
-    {"fieldPoll":"af30bd1c-bdfa-4b89-8767-52dc667758fc"}
-- ID: "abc57b6d-5542-4ab9-a889-106225a032e6"
-  Hint: Submit Action
-  Value: "{C9A95DCB-C608-43C2-9F28-F7C3BDF572FD}"
+- ID: "30bac824-e6c1-497e-ba09-80529c81c9e6"
+  Hint: VisualStyle
+  Value: 
+- ID: "47ac5c02-a908-46af-9823-c4626e85153c"
+  Hint: FieldsLayout
+  Value: 
+- ID: "a3ea5be2-5a0e-4e72-bb0a-0d0c19615f9e"
+  Hint: SectionVisualization
+  Value: 
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 200
+  Value: 600
 Languages:
 - Language: en
   Versions:
@@ -21,7 +23,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20210729T151850Z
+      Value: 20180606T182727Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -32,11 +34,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b9506743-957c-4a75-b82b-c3e2f15ee6b9"
+      Value: "616d499d-478b-4ff1-a126-9bf37bf624a8"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210729T151850Z
+      Value: 20180606T191039Z

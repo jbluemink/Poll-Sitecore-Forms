@@ -57,6 +57,11 @@
 			{
 				"name": "ruleconditionalrendering",
 				"path": "/sitecore/system/Settings/Rules/Conditional Renderings/Tags/Default"
+			},
+			{
+				"name": "coreactionlayoutcarcolor",
+				"path": "/sitecore/client/Applications/FormsBuilder/Components/Layouts/Actions/UpdateCarColor",
+				"database": "core"
 			}
 		]
 	}
