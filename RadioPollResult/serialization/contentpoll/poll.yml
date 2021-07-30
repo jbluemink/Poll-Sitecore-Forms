@@ -51,7 +51,7 @@ Languages:
               p:after="r[@uid='{B32D4237-2A01-4EE5-B198-DBC94AA9A2E2}']"
               s:ds="{3A552DCF-9681-4083-87EA-A97AD5C458A3}"
               s:id="{6B5B0FE6-5C85-4487-BA7E-F8C2ECC186A8}"
-              s:pt="{9332E0B7-9016-4C8A-9E7D-E69DB6CFCC9C}"
+              s:pt="{ADC7CE54-C4C3-408C-90AA-5EA51E265F9F}"
               s:par=""
               s:ph="jbl-content"
               s:ccb="Clear on publish">
@@ -70,7 +70,7 @@ Languages:
                     </conditions>
                     <actions>
                       <action
-                        uid="8214BD30F5D84C3CA800F7CC80701016"
+                        uid="A9AFDE00FE9B4476B4D9B5BD8A15178F"
                         s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" />
                     </actions>
                   </rule>
@@ -93,7 +93,7 @@ Languages:
               p:after="*[1=2]"
               s:ds="{30D03CCD-E1D7-4D7B-B719-25B0C69FE92D}"
               s:id="{B0E1F75A-1638-4202-BD41-D2A6C2277D84}"
-              s:pt="{9332E0B7-9016-4C8A-9E7D-E69DB6CFCC9C}"
+              s:pt="{ADC7CE54-C4C3-408C-90AA-5EA51E265F9F}"
               s:par=""
               s:ph="jbl-content"
               s:ccb="Clear on publish">
@@ -111,11 +111,7 @@ Languages:
                     </conditions>
                     <actions>
                       <action
-                        uid="A2A78A384C0E436EB64628CC32678334"
-                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
-                        s:DataSource="{30D03CCD-E1D7-4D7B-B719-25B0C69FE92D}" />
-                      <action
-                        uid="BC1EC296D3AF401AB072150FFF12838A"
+                        uid="C3B77E121712478FBA0EBD63456FE70B"
                         s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" />
                     </actions>
                   </rule>
@@ -128,12 +124,7 @@ Languages:
                         uid="BC4AE160AB38498AB87267F4A97F4D78"
                         s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
                     </conditions>
-                    <actions>
-                      <action
-                        uid="B10377F69D5F49DBA79BBC193214423B"
-                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
-                        s:DataSource="{30D03CCD-E1D7-4D7B-B719-25B0C69FE92D}" />
-                    </actions>
+                    <actions />
                   </rule>
                 </ruleset>
               </rls>
@@ -159,7 +150,7 @@ Languages:
       Value: Poll page
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2b647b13-e6e8-49c0-a3d4-8491f0d1dc5d"
+      Value: "bbce73cd-129f-4ce3-b5fc-16c57f6b2909"
     - ID: "a60acd61-a6db-4182-8329-c957982cec74"
       Hint: Text
       Value: |
@@ -171,4 +162,4 @@ Languages:
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210727T140704Z
+      Value: 20210730T141338Z

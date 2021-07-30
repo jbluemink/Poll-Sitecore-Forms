@@ -36,6 +36,11 @@ namespace RadioPollResult.SubmitActions
         {
             Assert.ArgumentNotNull(data, nameof(data));
             Assert.ArgumentNotNull(formSubmitContext, nameof(formSubmitContext));
+            if (Tracker.Current == null || Tracker.Current.Session == null)
+            {
+                return false;
+            }
+
             if (data.FieldPoll == null || data.FieldPoll == Guid.Empty)
             {
                 return false;
@@ -157,62 +162,60 @@ namespace RadioPollResult.SubmitActions
 
         public void SetColorInformationNewContact(string color)
         {
-            if (Sitecore.Analytics.Tracker.Current.Contact.IsNew)
+            var manager = Sitecore.Configuration.Factory.CreateObject("tracking/contactManager", true) as Sitecore.Analytics.Tracking.ContactManager;
+
+            if (manager != null)
             {
-                var manager = Sitecore.Configuration.Factory.CreateObject("tracking/contactManager", true) as Sitecore.Analytics.Tracking.ContactManager;
+                // Save contact to xConnect; at this point, a contact has an anonymous
+                // TRACKER IDENTIFIER, which follows a specific format. Do not use the contactId overload
+                // and make sure you set the ContactSaveMode as demonstrated
+                Sitecore.Analytics.Tracker.Current.Contact.ContactSaveMode = ContactSaveMode.AlwaysSave;
+                manager.SaveContactToCollectionDb(Sitecore.Analytics.Tracker.Current.Contact);
 
-                if (manager != null)
+                // Now that the contact is saved, you can retrieve it using the tracker identifier
+                // NOTE: Sitecore.Analytics.XConnect.DataAccess.Constants.IdentifierSource is marked internal in 9.0 Initial and cannot be used. If you are using 9.0 Initial, pass "xDB.Tracker" in as a string.
+                var trackerIdentifier = new IdentifiedContactReference(Sitecore.Analytics.XConnect.DataAccess.Constants.IdentifierSource, Sitecore.Analytics.Tracker.Current.Contact.ContactId.ToString("N"));
+
+                // Get contact from xConnect, update and save the facet
+                using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
                 {
-                    // Save contact to xConnect; at this point, a contact has an anonymous
-                    // TRACKER IDENTIFIER, which follows a specific format. Do not use the contactId overload
-                    // and make sure you set the ContactSaveMode as demonstrated
-                    Sitecore.Analytics.Tracker.Current.Contact.ContactSaveMode = ContactSaveMode.AlwaysSave;
-                    manager.SaveContactToCollectionDb(Sitecore.Analytics.Tracker.Current.Contact);
-
-                    // Now that the contact is saved, you can retrieve it using the tracker identifier
-                    // NOTE: Sitecore.Analytics.XConnect.DataAccess.Constants.IdentifierSource is marked internal in 9.0 Initial and cannot be used. If you are using 9.0 Initial, pass "xDB.Tracker" in as a string.
-                    var trackerIdentifier = new IdentifiedContactReference(Sitecore.Analytics.XConnect.DataAccess.Constants.IdentifierSource, Sitecore.Analytics.Tracker.Current.Contact.ContactId.ToString("N"));
-
-                    // Get contact from xConnect, update and save the facet
-                    using (XConnectClient client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
+                    try
                     {
-                        try
+                        var expandOptions = new ContactExpandOptions(RadioPollResult.Preferences.DefaultFacetKey);
+
+                        //Sitecore 10+
+                        var executeOptions = new ContactExecutionOptions(expandOptions);
+
+                        var contact = client.Get<Contact>(trackerIdentifier, executeOptions);
+
+                        if (contact != null)
                         {
-                            var expandOptions = new ContactExpandOptions(RadioPollResult.Preferences.DefaultFacetKey);
-
-                            //Sitecore 10+
-                            var executeOptions = new ContactExecutionOptions(expandOptions);
-
-                            var contact = client.Get<Contact>(trackerIdentifier, executeOptions);
-
-                            if (contact != null)
+                            var preferences = contact.GetFacet<Preferences>(Preferences.DefaultFacetKey);
+                            if (preferences != null)
                             {
-                                var preferences = contact.GetFacet<Preferences>(Preferences.DefaultFacetKey);
-                                if (preferences != null)
-                                {
-                                    preferences.FavoritCarColor = color;
-                                    client.SetFacet<Preferences>(contact, Preferences.DefaultFacetKey, preferences);
-                                }
-                                else
-                                {
-                                    client.SetFacet<Preferences>(contact, Preferences.DefaultFacetKey, new Preferences(color));
-                                }
-
-                                client.Submit();
-
-                                // Remove contact data from shared session state - contact will be re-loaded
-                                // during subsequent request with updated facets
-                                manager.RemoveFromSession(Sitecore.Analytics.Tracker.Current.Contact.ContactId);
-                                Sitecore.Analytics.Tracker.Current.Session.Contact = manager.LoadContact(Sitecore.Analytics.Tracker.Current.Contact.ContactId);
+                                preferences.FavoritCarColor = color;
+                                client.SetFacet<Preferences>(contact, Preferences.DefaultFacetKey, preferences);
                             }
+                            else
+                            {
+                                client.SetFacet<Preferences>(contact, Preferences.DefaultFacetKey, new Preferences(color));
+                            }
+
+                            client.Submit();
+
+                            // Remove contact data from shared session state - contact will be re-loaded
+                            // during subsequent request with updated facets
+                            manager.RemoveFromSession(Sitecore.Analytics.Tracker.Current.Contact.ContactId);
+                            Sitecore.Analytics.Tracker.Current.Session.Contact = manager.LoadContact(Sitecore.Analytics.Tracker.Current.Contact.ContactId);
                         }
-                        catch (XdbExecutionException ex)
-                        {
-                            // Manage conflicts / exceptions
-                        }
+                    }
+                    catch (XdbExecutionException ex)
+                    {
+                        // Manage conflicts / exceptions
                     }
                 }
             }
+            
         }  
     }
 }
