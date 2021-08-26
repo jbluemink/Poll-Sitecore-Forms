@@ -480,13 +480,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\EpExpressTab.config" />
+    <Content Include="App_Config\Include\enablePartialHtmlCacheClear.config" />
     <None Include="App_Config\Include\Preferences.xdb.config" />
+    <Content Include="sitecore\shell\client\Applications\FormsBuilder\Layouts\Actions\FlushPartialHtmlCache.js" />
     <Content Include="sitecore\shell\client\Applications\FormsBuilder\Layouts\Actions\UpdateCarColor.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\RadioPollResultController.cs" />
     <Compile Include="EpExpressPreferences.cs" />
+    <Compile Include="Eventing\FormFlushCacheRemoteEvent.cs" />
     <Compile Include="Models\EpExpressPreferencesModel.cs" />
     <Compile Include="Models\PreferencesModel.cs" />
     <Compile Include="Models\RadioPollResultModel.cs" />
@@ -495,7 +498,10 @@
     <Compile Include="Rules\IsFavoriteCarColorEmptyCondition.cs" />
     <Compile Include="Rules\FavoriteCarColorCondition.cs" />
     <Compile Include="Services\SqlPoll.cs" />
+    <Compile Include="SubmitActions\FlushPartialHtmlCache.cs" />
+    <Compile Include="SubmitActions\FlushPartialHtmlCacheData.cs" />
     <Compile Include="SubmitActions\UpdateCarColorData.cs" />
+    <Compile Include="SubmitActions\FlushCache.cs" />
     <Compile Include="SubmitActions\UpdateCarColorHarcoded.cs" />
     <Compile Include="SubmitActions\UpdateCarColor.cs" />
   </ItemGroup>

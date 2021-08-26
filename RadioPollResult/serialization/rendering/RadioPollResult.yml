@@ -7,6 +7,18 @@ SharedFields:
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
   Value: /sitecore/templates/Feature/FormExtension/RadioPollResult
+- ID: "3d08db46-2267-41b0-bc52-be69fd618633"
+  Hint: Cacheable
+  Value: 1
+- ID: "8b6d532b-6128-4486-a044-ca06d90948ba"
+  Hint: VaryByData
+  Value: 1
+- ID: "a6d4fc1d-0803-4e0a-9145-b8c6121d6f26"
+  Hint: CacheClearingBehavior
+  Value: Clear on content update
+- ID: "b4bbc0be-7619-4678-b2f7-947d84aa77a9"
+  Hint: Content Dependencies
+  Value: "{B0B5B0CD-6445-4FAE-A989-6CA9C50CC29A}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: /sitecore/content/Home/result
@@ -34,11 +46,11 @@ Languages:
         sitecore\admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "54eb1bad-e730-42fc-9208-3d6ddb81e520"
+      Value: "31fec813-c961-4d40-9739-e30a125d48ae"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\admin
+        sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210622T080834Z
+      Value: 20210826T073414Z

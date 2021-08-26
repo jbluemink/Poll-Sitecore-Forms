@@ -14,6 +14,9 @@ SharedFields:
 - ID: "84ece662-5034-40cb-9c60-744db64bb294"
   Hint: Field Key
   Value: 6066EEC08EE4408288E07B6DAC404CE0
+- ID: "90c4f94c-ec2c-4ee4-b4c8-f3e29cbe630e"
+  Hint: Allow Save
+  Value: 1
 - ID: "9f7da002-7b86-436b-8dda-7efe5837b88e"
   Hint: Min Length
   Value: 0
@@ -44,11 +47,11 @@ Languages:
       Value: surname
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f152e2ad-fcbb-4506-a384-efa39702390f"
+      Value: "014a99c7-57b5-4650-8f53-becb422b74ed"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210708T124850Z
+      Value: 20210802T173137Z

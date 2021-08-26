@@ -39,6 +39,14 @@
 				"path": "/sitecore/system/Settings/Forms/Submit Actions/Update Car Color"
 			},
 			{
+				"name": "submitactionFlush1",
+				"path": "/sitecore/system/Settings/Forms/Submit Actions/Flush Cache"
+			},
+			{
+				"name": "submitactionFlush2",
+				"path": "/sitecore/system/Settings/Forms/Submit Actions/Flush Partial Html Cache"
+			},
+			{
 				"name": "templates",
 				"path": "/sitecore/templates/Feature/FormExtension"
 			},
