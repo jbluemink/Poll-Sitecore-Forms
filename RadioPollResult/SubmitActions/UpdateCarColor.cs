@@ -112,7 +112,13 @@ namespace RadioPollResult.SubmitActions
 
             if (Sitecore.Analytics.Tracker.Current.Contact.IsNew || !Sitecore.Analytics.Tracker.Current.Contact.Identifiers.Any())
             {
-                SetColorInformationNewContact(color);
+                try
+                {
+                    SetColorInformationNewContact(color);
+                } catch(Exception ex)
+                {
+                    Log.Error("unable to SetColorInformation in xdb", ex, this);
+                }
             }
             else
             {

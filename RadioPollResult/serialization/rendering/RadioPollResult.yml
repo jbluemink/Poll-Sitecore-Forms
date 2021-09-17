@@ -13,6 +13,9 @@ SharedFields:
 - ID: "8b6d532b-6128-4486-a044-ca06d90948ba"
   Hint: VaryByData
   Value: 1
+- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
+  Hint: Page Editor Buttons
+  Value: "{08C34576-3500-4819-84E9-56D413464799}"
 - ID: "a6d4fc1d-0803-4e0a-9145-b8c6121d6f26"
   Hint: CacheClearingBehavior
   Value: Clear on content update
@@ -46,11 +49,11 @@ Languages:
         sitecore\admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "31fec813-c961-4d40-9739-e30a125d48ae"
+      Value: "90d9ab2f-8df0-4e73-b02b-a9e522a3caf2"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210826T073414Z
+      Value: 20210910T123057Z

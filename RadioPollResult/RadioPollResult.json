@@ -47,6 +47,10 @@
 				"path": "/sitecore/system/Settings/Forms/Submit Actions/Flush Partial Html Cache"
 			},
 			{
+				"name": "submitactionFlush3",
+				"path": "/sitecore/system/Settings/Forms/Submit Actions/Custom Flush Partial Cache"
+			},
+			{
 				"name": "templates",
 				"path": "/sitecore/templates/Feature/FormExtension"
 			},

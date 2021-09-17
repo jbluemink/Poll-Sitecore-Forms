@@ -10,7 +10,7 @@ Languages:
     Fields:
     - ID: "00f4032e-2d50-4feb-93d9-814576b848ee"
       Hint: Title
-      Value: "Test poll 26-8#2"
+      Value: Test poll 9/2
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20210707T133624Z
@@ -27,11 +27,39 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "65b7392c-b423-4dd9-a815-592177be52c0"
+      Value: "8775842a-f495-482f-9f32-31978884af07"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210826T084248Z
+      Value: 20210902T150656Z
+- Language: "nl-NL"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210909T090656Z
+    - ID: "51aab361-232b-4ad4-aaf5-a74e843a7f52"
+      Hint: Radio Field
+      Value: "{AF30BD1C-BDFA-4B89-8767-52DC667758FC}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "644315c1-a665-4ace-8d71-41c52104f9f7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210909T090730Z
