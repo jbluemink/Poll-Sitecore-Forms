@@ -1,9 +1,5 @@
-﻿using Sitecore;
-using Sitecore.Data;
-using Sitecore.Data.Items;
-using Sitecore.Diagnostics;
+﻿using Sitecore.Diagnostics;
 using Sitecore.Eventing;
-using Sitecore.Events;
 using Sitecore.Pipelines;
 using System;
 

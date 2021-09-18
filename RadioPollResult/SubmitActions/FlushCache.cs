@@ -1,5 +1,4 @@
 ﻿using Sitecore.Abstractions;
-using Sitecore.Analytics;
 using Sitecore.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.Diagnostics;
