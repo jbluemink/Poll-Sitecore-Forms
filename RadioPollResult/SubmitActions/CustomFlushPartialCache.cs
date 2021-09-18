@@ -10,7 +10,6 @@ using System;
 using Sitecore.Data.Items;
 using Sitecore.Data;
 using Sitecore;
-using Sitecore.Data.Eventing.Remote;
 using RadioPollResult.Eventing;
 
 namespace RadioPollResult.SubmitActions
@@ -18,7 +17,7 @@ namespace RadioPollResult.SubmitActions
     public class CustomFlushPartialCache : SubmitActionBase<FlushPartialHtmlCacheData>
     {
 
-        private IEventQueue defaultQueue;
+        private readonly IEventQueue defaultQueue;
         public CustomFlushPartialCache(ISubmitActionData submitActionData) : base(submitActionData)
         {
             this.defaultQueue = (IEventQueue)ServiceLocator.ServiceProvider.GetService<BaseEventQueueProvider>();
@@ -42,7 +41,7 @@ namespace RadioPollResult.SubmitActions
 
             Item item = Context.Database.GetItem(new ID(data.ReferenceId.Value));
            
-            Sitecore.Events.Event.RaiseEvent("custom:flushpartialcache", (object)item);
+            Sitecore.Events.Event.RaiseEvent("custom:flushpartialcache", (object)item.ID.ToGuid());
 
             //raise a remote event, to clear cache other servers.
             defaultQueue.QueueEvent<CustomFlushPartialCacheRemoteEvent>(new CustomFlushPartialCacheRemoteEvent(item), true, false);

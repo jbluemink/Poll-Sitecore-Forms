@@ -1,7 +1,7 @@
 ﻿using Sitecore.Abstractions;
-using Sitecore.Caching;
-using Sitecore.Data.Items;
+using Sitecore.Data;
 using Sitecore.Diagnostics;
+using Sitecore.Mvc.Extensions;
 using Sitecore.Web;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ namespace RadioPollResult.Eventing
     public class PartialHtmlCacheClearSingleItem
     {
         private readonly BaseSiteContextFactory _siteContextFactory;
-       
+
         public PartialHtmlCacheClearSingleItem(BaseSiteContextFactory siteContextFactory)
         {
             Assert.ArgumentNotNull((object)siteContextFactory, nameof(siteContextFactory));
@@ -22,23 +22,21 @@ namespace RadioPollResult.Eventing
         public void OnItemEvent(object sender, EventArgs args)
         {
             Assert.ArgumentNotNull((object)args, nameof(args));
-            Item item = (Item)Sitecore.Events.Event.ExtractParameter(args, 0);
-            if (item != null)
-            {
-                Flush(item);
-            }
+            Guid itemId = (Guid)Sitecore.Events.Event.ExtractParameter(args, 0);
+            Flush(new ID(itemId));
         }
 
-        private void Flush(Item item)
+        private void Flush(ID itemId)
         {
-            var sites = GetRelevantSites(item.Database.Name);
+            var sites = GetSitesWithPartialHtml();
             foreach (SiteInfo site in sites)
             {
                 var partialcache = Sitecore.Caching.CacheManager.FindCacheByName<string>(site.Name + "[partial html]");
-                if (partialcache != null) {
+                if (partialcache != null)
+                {
                     foreach (var key in partialcache.GetCacheKeys())
                     {
-                        if (key.Contains(item.ID.ToString()))
+                        if (key.Contains(itemId.ToString()))
                         {
                             partialcache.Remove(key);
                         }
@@ -47,7 +45,9 @@ namespace RadioPollResult.Eventing
             }
         }
 
-        private IEnumerable<SiteInfo> GetRelevantSites(string databaseName) => this._siteContextFactory.GetSites().Where<SiteInfo>((Func<SiteInfo, bool>)(site => site.CacheHtml && site.EnablePartialHtmlCaheClear && site.Database == databaseName));
-
+        private IEnumerable<SiteInfo> GetSitesWithPartialHtml()
+        {
+            return this._siteContextFactory.GetSites().Where<SiteInfo>(x => x.CacheHtml && x.EnablePartialHtmlCaheClear);
+        }
     }
 }
